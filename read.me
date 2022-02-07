@@ -1,0 +1,28 @@
+This is simple QueryBuilder
+
+class QueryBuilder consist of the following functions:
+
+1) function __construct gets param $pdo for automatically connection to necessary DB.
+
+2) function getAll gets params $table (name of the necessary table in DB)
+   and gives back array of all data in the table.
+
+3) function getOne gets params $table (name of the necessary table in DB)
+   and id of necessary position and gives back array of one position .
+
+4) function create gets params $table (name of the necessary table in DB)
+    and array of data. This function insert a new position into the named table.
+
+5) function update gets params $table (name of the necessary table in DB)
+   and array of data and id of item and returns array of updated position.
+
+
+6) function delete gets params $table (name of the necessary table in DB)
+   and id of necessary item and deletes the position with named id from table.
+
+
+For connection to DB the QueryBuilder class uses:
+ - Connection class with function make that connect to DB.,
+ - config.php with array of data for DB connection,
+ - start.php generate a new object of class QueryBuilder and as params gets method make of class Connection.
+
